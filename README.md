@@ -16,16 +16,15 @@ cd TaxCalculator
 
 ## Screenshots
 
-## Screenshots
 ![image](https://github.com/ShreyashIngle/TaxCalculator/assets/109937258/417a400d-0783-46f6-883b-831075dff0bc)
 
 
-result 
+#Result 
 
 ![image](https://github.com/ShreyashIngle/TaxCalculator/assets/109937258/f1167021-797d-4b21-9f05-ab89c450f3bc)
 
 
-validations
+#Validations
 
 ![image](https://github.com/ShreyashIngle/TaxCalculator/assets/109937258/5cb80eeb-be53-4174-8db4-9d5aa93dd3de)
 
