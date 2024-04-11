@@ -1,4 +1,4 @@
-# Income Calculator
+# Tax Calculator
 
 This is a simple income calculator web application.
 
