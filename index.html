@@ -59,7 +59,6 @@
 
         .error-icon {
             display: none;
-            /* Initially hide the error icon */
             position: absolute;
             right: 10px;
             top: 50%;
@@ -68,16 +67,14 @@
             cursor: pointer;
         }
 
-        /* Custom styling for the tooltip */
         .tooltip-inner {
             background-color: #0c0001;
-            /* Bootstrap danger color */
+
         }
 
-        /* Custom styling for the tooltip arrow */
         .tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before {
             border-right-color: #dc3545 !important;
-            /* Bootstrap danger color */
+
         }
     </style>
 </head>
@@ -94,7 +91,7 @@
                     <input type="text" class="form-control" id="gross-income" placeholder="Enter gross annual income"
                         required>
                     <span class="error-icon" style="color: red;" data-toggle="tooltip"
-                        data-original-title="Please enter number only ">!</span> <!-- Error icon -->
+                        data-original-title="Please enter number only ">!</span>
                 </div>
             </div>
             <div class="form-group">
@@ -103,7 +100,7 @@
                     <input type="text" class="form-control" id="extra-income" placeholder="Please enter extra income"
                         required />
                     <span class="error-icon" style="color: red;" data-toggle="tooltip"
-                        data-original-title="Please enter number only ">!</span> <!-- Error icon -->
+                        data-original-title="Please enter number only ">!</span>
                 </div>
             </div>
             <div class="form-group">
@@ -121,7 +118,7 @@
                     <input type="text" class="form-control" id="deductions"
                         placeholder="Enter total applicable deductions" required />
                     <span class="error-icon" style="color: red;" data-toggle="tooltip"
-                        data-original-title="Please enter number only ">!</span> <!-- Error icon -->
+                        data-original-title="Please enter number only ">!</span>
                 </div>
             </div>
             <button type="submit" class="btn">Submit</button>
@@ -139,19 +136,19 @@
             e.preventDefault();
 
             // Reset error icons
-            $(".error-icon").hide(); // Hide all error icons
-            // Validate inputs
+            $(".error-icon").hide();
+
             var valid = true;
             $(".form-control").each(function () {
                 var input = $(this);
-                // Check if the input value is numeric and not a tooltip input
+
                 if (isNaN(input.val()) && !input.attr('data-toggle')) {
                     input.next(".error-icon").show();
                     valid = false;
                 }
             });
             if (valid) {
-                // Proceed with calculations and modal display
+
                 calculateTax();
             }
 
@@ -177,21 +174,15 @@
                 }
             }
 
-            // Ensure tax is not negative
             if (tax < 0) {
                 tax = 0;
             }
 
-            // Calculate overall income after tax deductions
             var overallIncome = taxableIncome - tax;
-
-
-
 
             alert("Your overall income after tax deductions is: " + overallIncome.toFixed(2));
         });
 
-        // Initialize tooltips on document ready
         $(document).ready(function () {
             initializeTooltips();
         });
