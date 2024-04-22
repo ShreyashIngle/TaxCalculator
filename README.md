@@ -1,4 +1,4 @@
-# Tax Calculator
+# Tax Calculator using html css and js
 
 This is a simple income calculator web application.
 
