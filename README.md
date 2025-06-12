@@ -1,6 +1,6 @@
 # Tax Calculator using html css and js
 
-This is a simple income calculator web application.
+This is a simple income calculator web application mad in html.
 
 ## How to Run
 
